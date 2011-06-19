@@ -1,0 +1,1 @@
+/Users/Lifely/.bash_it/aliases/available/textmate.aliases.bash

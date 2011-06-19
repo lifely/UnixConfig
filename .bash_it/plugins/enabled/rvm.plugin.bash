@@ -1,0 +1,1 @@
+/Users/Lifely/.bash_it/plugins/available/rvm.plugin.bash

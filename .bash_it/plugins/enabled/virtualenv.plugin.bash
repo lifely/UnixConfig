@@ -1,0 +1,1 @@
+/Users/Lifely/.bash_it/plugins/available/virtualenv.plugin.bash
