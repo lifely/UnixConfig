@@ -1,5 +1,5 @@
 ;; -------------------------------------------------------------------------
-;; .emacs -- my personnal Emacs Init File
+;; .ems -- my personnal Emacs Init File
 ;;            see http://julien.frenchlabs.net
 ;;
 ;; Copyright (c) 1991-2011 Julien Di Marco <juliendimarco@me.com>
@@ -221,6 +221,7 @@
 ;; === Auto-complete ===
 ;; Manual: http://cx4a.org/software/auto-complete/manual.html
 ;; EmacsWiki: http://www.emacswiki.org/emacs/AutoComplete
+(require 'auto-complete)
 (require 'auto-complete-config)
 
 ;; = Loading Extension
@@ -232,7 +233,9 @@
 ;;(require 'auto-complete-verilog)
 
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/site-lisp/ac-dict")
+(if (not (eq system-type 'darwin))
 (ac-config-default)
+)
 
 ;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; EOF
