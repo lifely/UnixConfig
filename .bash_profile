@@ -4,7 +4,15 @@
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # Add rvm gems and nginx to the path
-export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin
+export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
+export PATH=$PATH:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin
+
+export PATH=$PATH:/usr/netsoul/sbin:/usr/netsoul/bin
+export PATH=$PATH:/usr/kerberos/sbin:/usr/kerberos/bin
+export PATH=$PATH:/usr/arla/sbin:/usr/arla/bin
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin
+export PATH=$PATH:/usr/sbin:/usr/bin:/sbin:/bin
+export PATH=$PATH:/usr/site/sbin:/usr/site/bin
 
 # Path to the bash it configuration
 export BASH=$HOME/.bash_it
@@ -19,6 +27,9 @@ export GIT_HOSTING='git@git.domain.com'
 # Set my editor and git editor
 export EDITOR="emacs -nw"
 export GIT_EDITOR='emacs -nw'
+
+# Set the Term - 256 classy
+export TERM="xterm-256color"
 
 # Set the path nginx
 export NGINX_PATH='/opt/nginx'
