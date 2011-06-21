@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/aliases/available/jekyll.aliases.bash
+../available/jekyll.aliases.bash

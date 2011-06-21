@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/aliases/available/emacs.aliases.bash
+../available/emacs.aliases.bash

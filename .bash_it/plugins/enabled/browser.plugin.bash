@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/plugins/available/browser.plugin.bash
+../available/browser.plugin.bash

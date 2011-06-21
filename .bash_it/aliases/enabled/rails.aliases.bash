@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/aliases/available/rails.aliases.bash
+../available/rails.aliases.bash

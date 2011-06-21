@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/plugins/available/jekyll.plugins.bash
+../available/jekyll.plugins.bash

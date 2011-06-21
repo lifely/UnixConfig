@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/plugins/available/javascript.plugins.bash
+../available/javascript.plugins.bash

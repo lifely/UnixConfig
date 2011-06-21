@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/plugins/available/base.plugin.bash
+../available/base.plugin.bash

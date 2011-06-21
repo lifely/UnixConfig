@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/plugins/available/battery.plugin.bash
+../available/battery.plugin.bash

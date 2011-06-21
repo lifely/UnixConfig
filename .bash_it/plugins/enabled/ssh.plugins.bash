@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/plugins/available/ssh.plugins.bash
+../available/ssh.plugins.bash

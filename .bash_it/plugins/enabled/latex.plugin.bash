@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/plugins/available/latex.plugin.bash
+../available/latex.plugin.bash

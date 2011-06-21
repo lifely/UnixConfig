@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/plugins/available/nginx.plugins.bash
+../available/nginx.plugins.bash

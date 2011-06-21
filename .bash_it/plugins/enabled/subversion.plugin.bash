@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/plugins/available/subversion.plugin.bash
+../available/subversion.plugin.bash

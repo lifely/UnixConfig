@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/aliases/available/heroku.aliases.bash
+../available/heroku.aliases.bash

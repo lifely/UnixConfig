@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/aliases/available/osx.aliases.bash
+../available/osx.aliases.bash

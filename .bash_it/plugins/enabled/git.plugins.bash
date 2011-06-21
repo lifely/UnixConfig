@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/plugins/available/git.plugins.bash
+../available/git.plugins.bash

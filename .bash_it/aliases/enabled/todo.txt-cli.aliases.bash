@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/aliases/available/todo.txt-cli.aliases.bash
+../available/todo.txt-cli.aliases.bash

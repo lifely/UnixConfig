@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/aliases/available/vim.aliases.bash
+../available/vim.aliases.bash

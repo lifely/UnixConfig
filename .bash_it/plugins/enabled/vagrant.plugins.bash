@@ -1,1 +1,1 @@
-/Users/Lifely/.bash_it/plugins/available/vagrant.plugins.bash
+../available/vagrant.plugins.bash
