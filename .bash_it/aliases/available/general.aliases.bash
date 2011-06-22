@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# epitech
+alias norme=/u/all/astek/public/norme/norme
+
 # List directory contents
 alias sl=ls
 alias ls='ls -G'        # Compact view, show colors
