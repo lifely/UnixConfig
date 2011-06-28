@@ -4,7 +4,7 @@
 	diff   = auto
 [user]
 	email = juliendimarco@me.com
-	name  = Julien Di Marco
+	name = Julien Di Marco
 [alias]
         ci = commit
         co = checkout
