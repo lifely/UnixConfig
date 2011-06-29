@@ -26,6 +26,7 @@ alias gexport='git archive --format zip --output'
 alias gdel='git branch -D'
 alias gmu='git fetch origin -v; git fetch upstream -v; git merge upstream/master'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
+alias glla='git log -a --graph --pretty=format:"%C(yellow)%h:%C(cyan)%an%Cred - %Creset%s" --abbrev-commit --color'
 
 case $OSTYPE in
   linux*)
