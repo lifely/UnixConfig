@@ -5,17 +5,17 @@ alias norme=/u/all/astek/public/norme/norme
 
 # List directory contents
 alias sl=ls
-alias ls='ls -G'        # Compact view, show colors
-alias la='ls -AF'       # Compact view, show hidden
-alias ll='ls -l'
-alias l='ls -al'
-alias l1='ls -1'
+alias ls='ls -Gh'        # Compact view, show colors, human readable
+alias la='ls -AFh'       # Compact view, show hidden
+alias ll='ls -lh'
+alias l='ls -alh'
+alias l1='ls -1h'
 
 alias _="sudo"
 
 if [ $(uname) = "Linux" ]
 then
-	alias ls="ls --color=always"
+	alias ls="ls --color=always -h"
 fi
 
 alias c='clear'
