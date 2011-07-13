@@ -2,6 +2,7 @@
 
 # epitech
 alias norme=/u/all/astek/public/norme/norme
+alias valgrind="valgrind --tool=memcheck --leak-check=yes --show-reachable=yes"
 
 # List directory contents
 alias sl=ls
