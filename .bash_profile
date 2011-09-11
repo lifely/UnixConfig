@@ -63,5 +63,7 @@ export TODO="t"
 # https://github.com/xvzf/vcprompt
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
+export CNORM_PATH="/usr/local/share/cnorm_3.0"
+
 # Load Bash It
 source $BASH/bash_it.sh
