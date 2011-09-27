@@ -4,7 +4,7 @@
 alias norme=/u/all/astek/public/norme/norme
 alias valgrind="valgrind --tool=memcheck --leak-check=yes --show-reachable=yes"
 alias pullAFS="git checkout-index -f -a --prefix=/u/all/di-mar_j/rendu/codeworker/"
-
+alias pcat="pygmentize -g"
 alias codeworker="/usr/local/bin/codeworker -nologo"
 
 # List directory contents
