@@ -4,7 +4,7 @@
 ;;       Part of my emacs configuration (see ~/.emacs or init.el)
 ;;
 ;; Creation:  08 Jan 2010
-;; Time-stamp: <Sun 2011-09-11 15:32 lifely>
+;; Time-stamp: <Fri 2011-09-23 22:59 lifely>
 ;;
 ;; Copyright (c) 2010 Julien Di Marco <juliendimarco@me.com>
 ;;               http://julien.frenchlabs.net
@@ -12,6 +12,14 @@
 ;; More information about Emacs Lisp:
 ;;              http://www.emacswiki.org/emacs/EmacsLisp
 ;; ----------------------------------------------------------------------
+
+
+;; NxHtml Load
+
+(load "~/.emacs.d/site-lisp/css-mode.el")
+(load "~/.emacs.d/site-lisp/less-mode.el")
+;(load "~/.emacs.d/site-lisp/nxml-mode-20041004/rng-auto.el")
+;(load "~/.emacs.d/site-lisp/nxhtml/autostart.el")
 
 ;; === Automode alist ===
 ;; list of filename patterns vs. corresponding major mode functions
@@ -21,13 +29,14 @@
          ("\\.c$"				. c-mode)
          ("\\.pod$"				. pod-mode)
          ("\\.\\(hh\\|cpp\\|cc\\|hpp\\|cxx\\)$" . c++-mode)
-         ("\\.\\(wml\\|htm\\|html\\|xhtml\\)$"  . nxhtml-mode)
+         ("\\.\\(wml\\|htm\\|html\\|xhtml\\)$"  . html-mode)
          ("\\.\\(diffs?\\|patch\\|rej\\)\\'"    . diff-mode)
          ("\\.\\(pl\\|pm\\|cgi\\)$"             . cperl-mode)
          ("\\.gnuplot$"				. gnuplot-mode)
          ("\\.plot$"				. gnuplot-mode)
          ("\\.php$"				. php-mode)
          ("\\.css$"				. css-mode)
+         ("\\.less$"				. less-css-mode)
          ("\\.cws$"				. tuareg-mode)
          ("\\.cwp$"				. tuareg-mode)
          ("\\.md$"				. markdown-mode)
