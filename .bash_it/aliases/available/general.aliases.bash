@@ -7,6 +7,8 @@ alias pullAFS="git checkout-index -f -a --prefix=/u/all/di-mar_j/rendu/codeworke
 alias pcat="pygmentize -g"
 alias codeworker="/usr/local/bin/codeworker -nologo"
 
+alias Transmission='transmission-remote 4224 -n frenchost:"quatre deux"'
+
 # List directory contents
 alias sl=ls
 alias ls='ls -Gh'        # Compact view, show colors, human readable
