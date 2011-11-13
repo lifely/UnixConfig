@@ -2,7 +2,7 @@
 
 # Load RVM, if you are using it
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-[[ -s /etc/profile/rvm.sh ]] && source /etc/profile/rvm.sh
+[[ -s /etc/profile.d/rvm.sh ]] && source /etc/profile.d/rvm.sh
 
 # Add rvm gems and nginx to the path
 export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
