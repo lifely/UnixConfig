@@ -1,3 +1,5 @@
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 #Make sure all terminals save history
 shopt -s histappend
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
