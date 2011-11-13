@@ -1,0 +1,17 @@
+# -------- Bind page up/down wih history search ---------
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+# -------- more sane command matching --------------------
+#ignore case in completion
+set completion-ignore-case on
+#do not show hidden files in the list
+set match-hidden-files off
+#removes the annoying "-- more --" prompt for long lists
+set page-completions off
+#show the "Display all 123 possibilities? (y or n)" prompt
+# only for really long lists
+set completion-query-items 350
+# show the list at first TAB, instead of beeping and
+# waiting for a second TAB to do that
+# uncomment next line to enable
+set show-all-if-ambiguous on
