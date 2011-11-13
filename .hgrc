@@ -1,0 +1,7 @@
+[extensions]
+color =
+progress =
+
+[alias]
+#short log
+llog = log --limit 10
