@@ -13,7 +13,7 @@ prompt_setter() {
   # displays user@server in purple
   # PS1="$red$(scm_char) $purple\u@\h$reset_color:$blue\w$yellow$(scm_prompt_info)$(rvm_version_prompt) $black\$$reset_color "
   # no user@server
-  PS1="$red$(scm_char) $purple\u$yellow@$orange\h $blue\W$yellow$(scm_prompt_info)$(rvm_version_prompt) $white\$$black$reset_color "
+  PS1="$red$(scm_char) $purple\u$yellow@\h $blue\W$yellow$(scm_prompt_info)$(rvm_version_prompt) $white\$$black$reset_color "
   PS2='> '
   PS4='+ '
 }
