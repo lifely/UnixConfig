@@ -199,7 +199,7 @@
 ;; === Indenting configuration ===
 ;; see http://www.emacswiki.org/emacs/IndentationBasics
 
-;; (setq-default tab-width 2)
+(setq-default tab-width 2)
 ;; (defvaralias 'c-basic-offset  'tab-width)
 ;; (defvaralias 'cperl-indent-level 'tab-width)
 
