@@ -204,7 +204,7 @@
 ;; (defvaralias 'cperl-indent-level 'tab-width)
 
 ;;(setq-default indent-tabs-mode        nil)     ; indentation can't insert tabs
-;; (setq-default indent-tabs-mode               t)
+(setq-default indent-tabs-mode					nil)
 ;; (require 'smarttabs)
 
 ;; Automatic indentation of pasted text like in TextMate
