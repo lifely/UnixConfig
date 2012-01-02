@@ -4,7 +4,7 @@
 ;;       Part of my emacs configuration (see ~/.emacs or init.el)
 ;;
 ;; Creation:  08 Jan 2010
-;; Time-stamp: <Fri 2011-09-23 22:59 lifely>
+;; Time-stamp: <Mon 2012-01-02 15:30 lifely>
 ;;
 ;; Copyright (c) 2010 Julien Di Marco <juliendimarco@me.com>
 ;;               http://julien.frenchlabs.net
@@ -18,6 +18,7 @@
 
 (load "~/.emacs.d/site-lisp/css-mode.el")
 (load "~/.emacs.d/site-lisp/less-mode.el")
+(load "~/.emacs.d/site-lisp/ruby-mode.el")
 ;(load "~/.emacs.d/site-lisp/nxml-mode-20041004/rng-auto.el")
 ;(load "~/.emacs.d/site-lisp/nxhtml/autostart.el")
 
@@ -25,30 +26,30 @@
 ;; list of filename patterns vs. corresponding major mode functions
 (setq auto-mode-alist
       (append
-       '(("\\.pov$"				. pov-mode)
-         ("\\.c$"				. c-mode)
-         ("\\.pod$"				. pod-mode)
+       '(("\\.pov$"                             . pov-mode)
+         ("\\.c$"                               . c-mode)
+         ("\\.pod$"                             . pod-mode)
          ("\\.\\(hh\\|cpp\\|cc\\|hpp\\|cxx\\)$" . c++-mode)
          ("\\.\\(wml\\|htm\\|html\\|xhtml\\)$"  . html-mode)
          ("\\.\\(diffs?\\|patch\\|rej\\)\\'"    . diff-mode)
          ("\\.\\(pl\\|pm\\|cgi\\)$"             . cperl-mode)
-         ("\\.gnuplot$"				. gnuplot-mode)
-         ("\\.plot$"				. gnuplot-mode)
-         ("\\.php$"				. php-mode)
-         ("\\.css$"				. css-mode)
-         ("\\.less$"				. less-css-mode)
-         ("\\.cws$"				. tuareg-mode)
-         ("\\.cwp$"				. tuareg-mode)
-         ("\\.md$"				. markdown-mode)
-         ("\\.rake$"				. ruby-mode)
-         ("\\.gemspec$"				. ruby-mode)
-         ("\\.rb$"				. ruby-mode)
-         ("Rakefile$"				. ruby-mode)
-         ("Gemfile$"				. ruby-mode)
-         ("Capfile$"				. ruby-mode)
-         (".ssh/config\\'"			. ssh-config-mode)
-         ("sshd?_config\\'" .			ssh-config-mode)
-         ("^TODO"				. change-log-mode))
+         ("\\.gnuplot$"                         . gnuplot-mode)
+         ("\\.plot$"                            . gnuplot-mode)
+         ("\\.php$"                             . php-mode)
+         ("\\.css$"                             . css-mode)
+         ("\\.less$"                            . less-css-mode)
+         ("\\.cws$"                             . tuareg-mode)
+         ("\\.cwp$"                             . tuareg-mode)
+         ("\\.md$"                              . markdown-mode)
+         ("\\.rake$"                            . ruby-mode)
+         ("\\.gemspec$"                         . ruby-mode)
+         ("\\.rb$"                              . ruby-mode)
+         ("Rakefile$"                           . ruby-mode)
+         ("Gemfile$"                            . ruby-mode)
+         ("Capfile$"                            . ruby-mode)
+         (".ssh/config\\'"                      . ssh-config-mode)
+         ("sshd?_config\\'"                     . ssh-config-mode)
+         ("^TODO"                               . change-log-mode))
        auto-mode-alist))
 
 ;; list of interpreters specified in the first line (starts with `#!')
