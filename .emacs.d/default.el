@@ -4,7 +4,7 @@
 ;;       Part of my emacs configuration (see ~/.emacs or init.el)
 ;;
 ;; Creation:  08 Jan 2010
-;; Time-stamp: <Mon 2012-01-02 15:30 lifely>
+;; Time-stamp: <Mon 2012-01-23 10:45 lifely>
 ;;
 ;; Copyright (c) 2010 Julien Di Marco <juliendimarco@me.com>
 ;;               http://julien.frenchlabs.net
@@ -17,6 +17,7 @@
 ;; NxHtml Load
 
 (load "~/.emacs.d/site-lisp/css-mode.el")
+(load "~/.emacs.d/site-lisp/php-mode.el")
 (load "~/.emacs.d/site-lisp/less-mode.el")
 (load "~/.emacs.d/site-lisp/ruby-mode.el")
 ;(load "~/.emacs.d/site-lisp/nxml-mode-20041004/rng-auto.el")
