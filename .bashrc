@@ -10,7 +10,7 @@ export HISTFILESIZE=1000
 #Use GREP color features by default
 export GREP_OPTIONS='--color=auto'
 
-eval `dircolors -b $HOME/.dircolors`
+[[ `which dircolors` ]] && eval `dircolors -b $HOME/.dircolors`
 
 ulimit -c unlimited
 source ~/.bash_profile
