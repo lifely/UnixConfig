@@ -15,5 +15,10 @@ then
 eval `dircolors -b $HOME/.dircolors`
 fi
 
+if [[ `which gdircolors` ]]
+then
+eval `gdircolors -b $HOME/.dircolors`
+fi
+
 ulimit -c unlimited
 source ~/.bash_profile
