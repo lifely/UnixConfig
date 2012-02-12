@@ -1,5 +1,5 @@
 ;; -------------------------------------------------------------------------
-;; .ems -- my personnal Emacs Init File
+;; .emacs -- my personnal Emacs Init File
 ;;            see http://julien.frenchlabs.net
 ;;
 ;; Copyright (c) 1991-2011 Julien Di Marco <juliendimarco@me.com>
@@ -40,6 +40,8 @@
 (add-to-list 'load-path "~/.emacs.d/color-theme/")		; color-theme Themes
 (add-to-list 'load-path "~/.emacs.d/site-lisp")			; external elisp files
 (add-to-list 'load-path "~/.emacs.d/site-lisp/color-theme/")	; Color-Theme Porta
+
+(message "Testing load-path: %s" load-path)
 
 ;; =====================
 ;; Definition & Load
