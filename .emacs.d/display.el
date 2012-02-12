@@ -4,7 +4,7 @@
 ;;       Part of my emacs configuration (see ~/.emacs or init.el)
 ;;
 ;; Creation:  08 Jan 2010
-;; Time-stamp: <Wed 2011-03-09 18:10 di-mar_j>
+;; Time-stamp: <Sun 2012-02-12 18:26 lifely>
 ;;
 ;; Copyright (c) 2010 Julien Di Marco <juliendimarco@me.com>
 ;;               http://julien.frenchlabs.net
@@ -123,6 +123,9 @@
 (set-face-background 'hl-line "#222")  ;; Emacs 22 Only
 ;;(set-face-background 'highlight "#330")  ;; Emacs 21 Only
 
+;; Selection Highlight on mac os x
+(cua-mode               t)
+(cua-selection-mode     t)
 
 (provide 'display)
 ;; ----------------------------------------------------------------------

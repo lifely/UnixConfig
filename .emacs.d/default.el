@@ -4,7 +4,7 @@
 ;;       Part of my emacs configuration (see ~/.emacs or init.el)
 ;;
 ;; Creation:  08 Jan 2010
-;; Time-stamp: <Mon 2012-01-23 10:45 lifely>
+;; Time-stamp: <Sun 2012-02-12 19:48 lifely>
 ;;
 ;; Copyright (c) 2010 Julien Di Marco <juliendimarco@me.com>
 ;;               http://julien.frenchlabs.net
@@ -16,12 +16,12 @@
 
 ;; NxHtml Load
 
-(load "~/.emacs.d/site-lisp/css-mode.el")
-(load "~/.emacs.d/site-lisp/php-mode.el")
-(load "~/.emacs.d/site-lisp/less-mode.el")
-(load "~/.emacs.d/site-lisp/ruby-mode.el")
-;(load "~/.emacs.d/site-lisp/nxml-mode-20041004/rng-auto.el")
-;(load "~/.emacs.d/site-lisp/nxhtml/autostart.el")
+;; (load "~/.emacs.d/site-lisp/css-mode.el")
+;; (load "~/.emacs.d/site-lisp/php-mode.el")
+;; (load "~/.emacs.d/site-lisp/less-mode.el")
+;; (load "~/.emacs.d/site-lisp/ruby-mode.el")
+;; (load "~/.emacs.d/site-lisp/nxml-mode-20041004/rng-auto.el")
+;; (load "~/.emacs.d/site-lisp/nxhtml/autostart.el")
 
 ;; === Automode alist ===
 ;; list of filename patterns vs. corresponding major mode functions
@@ -65,10 +65,13 @@
 ;; Tuareg Mode + ocaml
 
 (setq auto-mode-alist (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist))
-(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
-(autoload 'caml-mode "tuareg" "Major mode for editing Caml code" t)
-(autoload 'camldebug "camldebug" "Run the Caml debugger" t)
-
+(autoload 'tuareg-mode  "tuareg"        "Major mode for editing Caml code"      t)
+(autoload 'caml-mode    "tuareg"        "Major mode for editing Caml code"      t)
+(autoload 'camldebug    "camldebug"     "Run the Caml debugger"                 t)
+(autoload 'ruby-mode    "ruby-mode"     nil                                     t)
+(autoload 'css-mode     "css-mode"      nil                                     t)
+(autoload 'less-mode    "less-mode"     nil                                     t)
+(autoload 'php-mode     "php-mode"      nil                                     t)
 
 ;; Espresso Mode
 ;; (autoload #'espresso-mode "espresso" "Start espresso-mode" t)
