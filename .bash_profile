@@ -5,13 +5,13 @@
 [[ -s /etc/profile.d/rvm.sh ]] && source /etc/profile.d/rvm.sh
 
 # Add rvm gems and nginx to the path
+export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
 export PATH=$PATH:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin
 
 export PATH=$PATH:/usr/netsoul/sbin:/usr/netsoul/bin
 export PATH=$PATH:/usr/kerberos/sbin:/usr/kerberos/bin
 export PATH=$PATH:/usr/arla/sbin:/usr/arla/bin
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin
 export PATH=$PATH:/usr/sbin:/usr/bin:/sbin:/bin
 export PATH=$PATH:/usr/site/sbin:/usr/site/bin
 export PATH=$PATH:/usr/school/bin/
@@ -69,13 +69,4 @@ export CNORM_PATH="/usr/local/share/cnorm_3.0"
 # Load Bash It
 source $BASH/bash_it.sh
 
-## Colors LS
-if [[ `which dircolors` ]]
-then
-eval `dircolors -b $HOME/.dircolors`
-fi
-
-if [[ `which gdircolors` ]]
-then
-eval `gdircolors -b $HOME/.dircolors`
-fi
+unset LC_CTYPE

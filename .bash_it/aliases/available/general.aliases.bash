@@ -11,8 +11,8 @@ alias Transmission='transmission-remote 4224 -n frenchost:"quatre deux"'
 
 # List directory contents
 alias sl=ls
-alias ls='ls -Gh'        # Compact view, show colors, human readable
-alias la='ls -AFh'       # Compact view, show hidden
+alias ls='ls -Gh --color=auto --group-directories-first'        # Compact view, show colors, human readable
+alias la='ls -AFh'                                              # Compact view, show hidden
 alias ll='ls -lh'
 alias l='ls -alh'
 alias l1='ls -1h'

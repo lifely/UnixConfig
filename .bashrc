@@ -1,5 +1,4 @@
 #Make sure all terminals save history
-unset LC_CTYPE
 shopt -s histappend
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
