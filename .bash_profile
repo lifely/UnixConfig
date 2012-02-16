@@ -68,3 +68,14 @@ export CNORM_PATH="/usr/local/share/cnorm_3.0"
 
 # Load Bash It
 source $BASH/bash_it.sh
+
+## Colors LS
+if [[ `which dircolors` ]]
+then
+eval `dircolors -b $HOME/.dircolors`
+fi
+
+if [[ `which gdircolors` ]]
+then
+eval `gdircolors -b $HOME/.dircolors`
+fi
