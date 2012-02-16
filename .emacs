@@ -37,9 +37,11 @@
 ;; === Load path etc. ===
 
 (add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/.emacs.d/color-theme/")		; color-theme Themes
-(add-to-list 'load-path "~/.emacs.d/site-lisp")			; external elisp files
-(add-to-list 'load-path "~/.emacs.d/site-lisp/color-theme/")	; Color-Theme Porta
+(add-to-list 'load-path "~/.emacs.d/color-theme/")              ; color-theme Themes
+(add-to-list 'load-path "~/.emacs.d/site-lisp/")                ; external elisp files
+(add-to-list 'load-path "~/.emacs.d/site-lisp/color-theme/")    ; Color-Theme Porta
+
+(message "Testing Load-Path: %s" load-path)
 
 (message "Testing load-path: %s" load-path)
 
@@ -74,6 +76,7 @@
 
 (setq buffers-menu-max-size             nil)         ; no buffer max-size
 (setq truncate-partial-width-windows    nil)
+
 (setq line-number-mode          t)
 (setq column-number-mode        t)
 (setq search-highlight          t)      ; highlight search object
@@ -82,12 +85,13 @@
 (column-number-mode             t)      ; column number in graphical
 (setq byte-compile-verbose      t)
 ;;(setq visible-bell            t)      ; Make screen blink at end & start - disturbing
+
 (setq initial-major-mode 'text-mode)    ; to avoid autoloads for lisp mode
 ;;(setq require-final-newline   t)      ; ensure a file ends in a newline when it
                                         ; is saved
 
-(setq show-trailing-whitespace  t)      ; color whitespace in red
-(setq-default show-trailing-whitespace t)  ;; ^ see this sentence
+(setq show-trailing-whitespace          t)      ; color whitespace in red
+(setq-default show-trailing-whitespace  t)      ; ^ see this sentence
 
 ;; === Auto-save and backup files ===
 (setq auto-save-list-file-name  nil)    ; no .saves files
@@ -194,9 +198,9 @@
 ;; see http://code.google.com/p/autopair/ or
 ;; http://www.emacswiki.org/emacs/AutoPairs
 ;; ==============================================================
-(require 'autopair)
-(autopair-global-mode) ;; enable autopair in all buffers
-(setq autopair-autowrap t)
+;(require 'autopair)
+;(autopair-global-mode) ;; enable autopair in all buffers
+;(setq autopair-autowrap t)
 
 ;; === Indenting configuration ===
 ;; see http://www.emacswiki.org/emacs/IndentationBasics
@@ -225,6 +229,7 @@
 ;; EmacsWiki: http://www.emacswiki.org/emacs/AutoComplete
 (require 'auto-complete)
 (require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/site-lisp/ac-dict/")
 
 ;; = Loading Extension
 (load-library "clang-completion-mode")
@@ -234,10 +239,10 @@
 ;;(require 'auto-complete-etags)
 ;;(require 'auto-complete-verilog)
 
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/site-lisp/ac-dict")
+
 (if (not (eq system-type 'darwin))
-(ac-config-default)
-)
+    (ac-config-default)
+  )
 
 ;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; EOF
