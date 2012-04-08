@@ -3,7 +3,7 @@
 ;;       Part of my emacs configuration (see ~/.emacs or init.el)
 ;;
 ;; Creation:  01 Mar 2011
-;; Time-stamp: <Fri 2011-04-22 21:32 di-mar_j>
+;; Time-stamp: <Dim 2012-04-08 01:56 lifely>
 ;;
 ;; Copyright (c) 2010 Julien Di Marco <juliendimarco@me.com>
 ;;               http://julien.frenchlabs.net
@@ -91,14 +91,13 @@
 (global-set-key (kbd "C-x C-e") 'smart-compile)
 
 ;; === Kill this buffer ===
-(global-set-key (kbd "C-q") 'kill-this-buffer)
+;(global-set-key (kbd "C-q") 'kill-this-buffer)
 
 ;; === Launch a shell ===
 (global-set-key (kbd "C-!") 'shell)
 
 ;; === Re-indent the full file (quite useful) ===
 (global-set-key (kbd "C-x i") 'indent-buffer)  ; see ~/.emacs.d/init-defuns
-;(global-set-key (kbd "C-x o") 'indent-buffer)  ; see ~/.emacs.d/init-defuns
 
 ;; === yank and indent copied region ===
 (global-set-key (kbd "M-v")  'yank-and-indent)

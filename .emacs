@@ -41,25 +41,24 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")                ; external elisp files
 (add-to-list 'load-path "~/.emacs.d/site-lisp/color-theme/")    ; Color-Theme Porta
 
-(message "Testing Load-Path: %s" load-path)
-
-(message "Testing load-path: %s" load-path)
-
 ;; =====================
 ;; Definition & Load
 ;; =====================
-(require 'school)                ; see  ~/.emacs.d/school.el
-(require 'school-advanced)       ; see  ~/.emacs.d/school-advanced.el
+ (require 'school)                ; see  ~/.emacs.d/school.el
+ (require 'school-advanced)       ; see  ~/.emacs.d/school-advanced.el
 
-(require 'default)               ; see  ~/.emacs.d/default.el
-(require 'display)               ; see  ~/.emacs.d/display.el
-(require 'defuns)                ; see  ~/.emacs.d/defuns.el
-(require 'bindings)              ; see  ~/.emacs.d/bindings.el
-
+ (require 'default)               ; see  ~/.emacs.d/default.el
+ (require 'display)               ; see  ~/.emacs.d/display.el
+ (require 'defuns)                ; see  ~/.emacs.d/defuns.el
+ (require 'bindings)              ; see  ~/.emacs.d/bindings.el
 
 ;; =====================
 ;; General Emacs Options
 ;; =====================
+
+;; == UTF-8 Unicode Encoding
+(prefer-coding-system 'utf-8)
+
 
 ;; === User authentication ===
 (setq user-full-name    "Julien Di Marco")
@@ -83,7 +82,7 @@
 (setq query-replace-highlight   t)      ; highlight query object
 (auto-compression-mode          t)      ; transparently edit compressed files
 (column-number-mode             t)      ; column number in graphical
-(setq byte-compile-verbose      t)
+(setq byte-compile-verbose      nil)
 ;;(setq visible-bell            t)      ; Make screen blink at end & start - disturbing
 
 (setq initial-major-mode 'text-mode)    ; to avoid autoloads for lisp mode
@@ -91,7 +90,7 @@
                                         ; is saved
 
 (setq show-trailing-whitespace          t)      ; color whitespace in red
-(setq-default show-trailing-whitespace  t)      ; ^ see this sentence
+(setq-default show-trailing-whitespace  t)
 
 ;; === Auto-save and backup files ===
 (setq auto-save-list-file-name  nil)    ; no .saves files
@@ -120,8 +119,11 @@
 ;; These should be loaded on startup rather than autoloaded
 ;; on demand since they are likely to be used in every session
 
+;; =====================
+;; Additional Mode/Init
+;; =====================
+
 ;; === line colums ===
-;;(require 'line-num)
 (require 'linum)
 (setq linum-format "%d ")
 (global-linum-mode)
@@ -139,90 +141,72 @@
 (when (fboundp 'iswitchb-default-keybindings)
   (iswitchb-default-keybindings))
 
+;; == Better search in file/buffer input
 (require 'ido)
 (ido-mode t)
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 
-;; Htmlize
+;; === Htmlize Mode ===
 (require 'htmlize)
 
-;; turn on Common Lisp support
-(require 'cl)
+;; === Sessions Saving Mode ===
+(require 'saveplace)            ; Saving Emacs Sessions
+(setq-default save-place t)     ; (cursor position etc. )
 
-;; Saving Emacs Sessions (cursor position etc. in a previously visited file)
-(require 'saveplace)
-(setq-default save-place t)
-
-;; Unique buffer names dependent on file name
-(require 'uniquify)
-;; style used for uniquifying buffer names with parts of directory name
-(setq uniquify-buffer-name-style 'forward)
+;; === Uniquify Mode for buffer Name ===
+(require 'uniquify)     ; Unique buffer names dependent on file name
+(setq uniquify-buffer-name-style 'forward) ; Use names with parts of directory
 
 ;; === Maintain last change time stamps (via Time-stamp: <>) ===
 (require 'time-stamp)
 ;; format of the string inserted by `M-x time-stamp'
-(setq time-stamp-format "%3a %:y-%02m-%02d %02H:%02M %u")
 ;; `Weekday YYYY-MM-DD HH:MM USER'
-
-;; update time stamps every time you save a buffer
-(add-hook 'write-file-hooks 'time-stamp)
+(setq time-stamp-format "%3a %:y-%02m-%02d %02H:%02M %u")
+(add-hook 'write-file-hooks 'time-stamp) ; update at buffer-saving
 
 ;; === Show matching parenthesis ===
 (require 'paren)
 (show-paren-mode t)
 
-;;(setq show-paren-style 'expression)                           ; color all the scope
-;;(set-face-background 'show-paren-match-face "turquoise")      ; set the scope color
-
-;; (set-face-attribute 'show-paren-match-face nil
-;;                  :weight 'bold :underline nil :overline nil :slant 'normal)
-(set-face-foreground 'show-paren-mismatch-face "red")
-(set-face-attribute 'show-paren-mismatch-face nil
-                    :weight 'bold :underline t :overline nil :slant 'normal)
-
-
-;; show matching parenthesis, even if found outside the present screen.
-;; see http://www.emacswiki.org/emacs/MicParen
-;;(require 'mic-paren)  ; loading
-;;(paren-activate)      ; activating
+(set-face-foreground 'show-paren-mismatch-face "red") ; set the scope color
+(set-face-attribute  'show-paren-mismatch-face nil
+                     :weight 'bold :underline t :overline nil :slant 'normal)
 
 ;; === Show whitespaces/tabs etc. ===
+
+;; make whitespace-mode use “¶” for newline and “▷” for tab.
+;; together with the rest of its defaults
+(setq whitespace-display-mappings
+ '(
+   (space-mark 32 [183] [46]) ; normal space, ·
+   (space-mark 160 [164] [95])
+   (space-mark 2208 [2212] [95])
+   (space-mark 2336 [2340] [95])
+   (space-mark 3616 [3620] [95])
+   (space-mark 3872 [3876] [95])
+   (newline-mark 10 [182 10]) ; newlne, ¶
+   (tab-mark 9 [8677 9] [92 9]) ; tab, ⇥
+))
+
 (setq x-stretch-cursor t)
 (require 'show-wspace)
 ;;(add-hook 'font-lock-mode-hook 'show-ws-highlight-tabs)
 
-
-;; ==============================================================
-;; Autopair: Automagically pair braces and quotes like TextMate
-;; see http://code.google.com/p/autopair/ or
-;; http://www.emacswiki.org/emacs/AutoPairs
-;; ==============================================================
-;(require 'autopair)
-;(autopair-global-mode) ;; enable autopair in all buffers
-;(setq autopair-autowrap t)
-
 ;; === Indenting configuration ===
 ;; see http://www.emacswiki.org/emacs/IndentationBasics
 
-(setq-default tab-width 2)
-;; (defvaralias 'c-basic-offset  'tab-width)
-;; (defvaralias 'cperl-indent-level 'tab-width)
+(setq tab-stop-list (number-sequence 2 120 2)) ; tab-to-tab stop list (M-i)
+(setq-default indent-tabs-mode  nil)           ; indentation can't insert tabs
+(setq-default tab-width         2)
+(setq indent-line-function      'insert-tab)
+;;(setq c-brace-offset 2)
 
-;;(setq-default indent-tabs-mode        nil)     ; indentation can't insert tabs
-(setq-default indent-tabs-mode					nil)
-;; (require 'smarttabs)
+(defvaralias 'c-basic-offset      'tab-width)  ; use previous var
+(defvaralias 'cperl-indent-level  'tab-width)
 
 ;; Automatic indentation of pasted text like in TextMate
 ;; See M-v command in init-bindings.el for yand-and-indent
-
-;; (setq c-brace-offset 2)
-;; (setq c-auto-newline t)
-;; (add-hook 'c-mode-common-hook (lambda () (setq c-basic-offset 4)))
-;; (add-hook 'c-mode-common-hook (lambda () (setq c-recognize-knr-p nil)))
-;; (add-hook 'ada-mode-hook (lambda ()      (setq ada-indent 4)))
-;; (add-hook 'perl-mode-hook (lambda ()     (setq perl-basic-offset 4)))
-;; (add-hook 'cperl-mode-hook (lambda ()    (setq cperl-indent-level 4)))
 
 ;; === Auto-complete ===
 ;; Manual: http://cx4a.org/software/auto-complete/manual.html
@@ -235,14 +219,19 @@
 (load-library "clang-completion-mode")
 (require 'auto-complete-extension)
 
-;;(require 'auto-complete-octave)
-;;(require 'auto-complete-etags)
-;;(require 'auto-complete-verilog)
-
-
 (if (not (eq system-type 'darwin))
     (ac-config-default)
   )
+
+;; ==============================================================
+;; Autopair: Automagically pair braces and quotes like TextMate
+;; see http://code.google.com/p/autopair/ or
+;; http://www.emacswiki.org/emacs/AutoPairs
+;; ==============================================================
+
+;;(require 'autopair)
+;;(autopair-global-mode) ;; enable autopair in all buffers
+;;(setq autopair-autowrap t)
 
 ;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; EOF
