@@ -196,11 +196,23 @@
 ;; === Indenting configuration ===
 ;; see http://www.emacswiki.org/emacs/IndentationBasics
 
-(setq tab-stop-list (number-sequence 2 120 2)) ; tab-to-tab stop list (M-i)
 (setq-default indent-tabs-mode  nil)           ; indentation can't insert tabs
+(setq         indent-tabs-mode  nil)
 (setq-default tab-width         2)
+(setq         tab-width         2)
 (setq indent-line-function      'insert-tab)
+(setq tab-stop-list (number-sequence 4 120 4)) ; tab-to-tab stop list (M-i)
 ;;(setq c-brace-offset 2)
+
+;; Overwrite major-mode - In fact mode like makefile are forced to do it
+;; (add-hook 'after-change-major-mode-hook
+;;           '(lambda ()
+;;              (setq-default indent-tabs-mode  nil)           ; indentation can't insert tabs
+;;              (setq         indent-tabs-mode  nil)
+;;              (setq-default tab-width         2)
+;;              (setq         tab-width         2)
+;;              (setq indent-line-function      'insert-tab)
+;;              (setq tab-stop-list (number-sequence 2 120 2))))
 
 (defvaralias 'c-basic-offset      'tab-width)  ; use previous var
 (defvaralias 'cperl-indent-level  'tab-width)

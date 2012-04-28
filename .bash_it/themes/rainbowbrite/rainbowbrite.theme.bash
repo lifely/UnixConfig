@@ -14,6 +14,7 @@ prompt_setter() {
   # PS1="$red$(scm_char) $purple\u@\h$reset_color:$blue\w$yellow$(scm_prompt_info)$(rvm_version_prompt) $black\$$reset_color "
   # no user@server
   PS1="$red$(scm_char) $purple\u$yellow@\h $blue\W$yellow$(scm_prompt_info)$(rvm_version_prompt) $white\$$black$reset_color "
+  PS1="\[\033[G\]$PS1" ## FIX the bad cursor index issue with ^C
   PS2='> '
   PS4='+ '
 }
