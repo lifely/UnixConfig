@@ -6,6 +6,7 @@
 
 # Add rvm gems and nginx to the path
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
 export PATH=$PATH:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin
 
