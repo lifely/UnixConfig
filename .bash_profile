@@ -15,7 +15,7 @@ export PATH=$PATH:/usr/kerberos/sbin:/usr/kerberos/bin
 export PATH=$PATH:/usr/arla/sbin:/usr/arla/bin
 export PATH=$PATH:/usr/sbin:/usr/bin:/sbin:/bin
 export PATH=$PATH:/usr/site/sbin:/usr/site/bin
-export PATH=$PATH:/usr/school/bin/
+export PATH=$PATH:/usr/school/bin
 
 # Path to the bash it configuration
 export BASH=$HOME/.bash_it
