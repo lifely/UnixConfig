@@ -6,22 +6,21 @@
 
 # Add rvm gems and nginx to the path
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
+
 if [ "$(uname -s)" == "Darwin" ]; then
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+# man PATH
+export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
 fi
+
 export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
 export PATH=$PATH:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin
-
 export PATH=$PATH:/usr/netsoul/sbin:/usr/netsoul/bin
 export PATH=$PATH:/usr/kerberos/sbin:/usr/kerberos/bin
 export PATH=$PATH:/usr/arla/sbin:/usr/arla/bin
 export PATH=$PATH:/usr/sbin:/usr/bin:/sbin:/bin
 export PATH=$PATH:/usr/site/sbin:/usr/site/bin
 export PATH=$PATH:/usr/school/bin
-
-# man PATH
-
-export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
 
 # Path to the bash it configuration
 export BASH=$HOME/.bash_it
