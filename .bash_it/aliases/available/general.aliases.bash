@@ -10,7 +10,7 @@ alias codeworker="/usr/local/bin/codeworker -nologo"
 alias Transmission='transmission-remote 4224 -n frenchost:"quatre deux"'
 
 # List directory contents
-alias sl=ls
+alias sl='ls'
 alias ls='ls -Gh --color=auto --group-directories-first'        # Compact view, show colors, human readable
 alias la='ls -AFh'                                              # Compact view, show hidden
 alias ll='ls -lh'
@@ -21,7 +21,7 @@ alias _="sudo"
 
 if [ $(uname) = "Linux" ]
 then
-	alias ls="ls --color=always -h"
+	alias ls="ls --color=always -h --group-directories-first"
 fi
 
 alias c='clear'
