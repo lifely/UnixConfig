@@ -9,8 +9,11 @@ export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 
 if [ "$(uname -s)" == "Darwin" ]; then
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
 # man PATH
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
 
 export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
