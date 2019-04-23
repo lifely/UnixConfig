@@ -4,6 +4,10 @@
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 [[ -s /etc/profile.d/rvm.sh ]] && source /etc/profile.d/rvm.sh
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
 # Add rvm gems and nginx to the path
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 
