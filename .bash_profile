@@ -15,6 +15,8 @@ if [ "$(uname -s)" == "Darwin" ]; then
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
+ export LANG=en_US.UTF-8
+
 # man PATH
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
