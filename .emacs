@@ -36,7 +36,8 @@
 
 ;; === Load path etc. ===
 
-(add-to-list 'load-path "~/.emacs.d/")
+;;(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/defaults")
 (add-to-list 'load-path "~/.emacs.d/color-theme/")              ; color-theme Themes
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")                ; external elisp files
 (add-to-list 'load-path "~/.emacs.d/site-lisp/color-theme/")    ; Color-Theme Porta

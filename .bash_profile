@@ -8,6 +8,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
+## Adds phabricator, arcanist review path bins (used by witbe)
+export PATH="$PATH:/Users/lifely/Developer/playground/arcanist/arcanist/bin"
+
 # Add rvm gems and nginx to the path
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 

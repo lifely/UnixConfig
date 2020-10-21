@@ -3,7 +3,7 @@
 	branch = auto
 	diff   = auto
 [user]
-	email = juliendimarco@me.com
+	email = julien.dimarco@witbe.net
 	name = Julien Di Marco
 [alias]
         ci = commit
