@@ -1,0 +1,8 @@
+### Reveal LLDB commands support - DO NOT MODIFY
+command script import /Users/lifely/Library/Application\ Support/Reveal/RevealServerCommands.py
+###
+
+### Chisel LLDB commands support
+command script import /usr/local/opt/chisel/libexec/fbchisellldb.py
+###
+command script import "/Users/lifely/Library/Application Support/Kaleidoscope/lldb_ksdiff.py"

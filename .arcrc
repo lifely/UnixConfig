@@ -1,0 +1,15 @@
+{
+  "hosts": {
+    "https://phabricator.rd.witbe.net/api/": {
+      "token": "cli-gpqcmeoebp4eaefsvragj3usbhvj"
+    }
+  },
+  "config": {
+    "hosts": {
+      "https://phabricator.rd.witbe.net/api/": {
+        "token": "cli-gpqcmeoebp4eaefsvragj3usbhvj"
+      }
+    },
+    "history.immutable": true
+  }
+}
