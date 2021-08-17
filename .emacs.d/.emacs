@@ -44,8 +44,6 @@
 ;; =====================
 ;; Definition & Load
 ;; =====================
-(require 'school)                ; see  ~/.emacs.d/school.el
-(require 'school-advanced)       ; see  ~/.emacs.d/school-advanced.el
 
 (require 'default)               ; see  ~/.emacs.d/default.el
 (require 'display)               ; see  ~/.emacs.d/display.el
