@@ -2,6 +2,7 @@
 	status = auto
 	branch = auto
 	diff   = auto
+	ui = true
 [user]
 	email = julien.dimarco@witbe.net
 	name = Julien Di Marco
