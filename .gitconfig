@@ -1,15 +1,41 @@
-[color]
-	status = auto
-	branch = auto
-	diff   = auto
-	ui = true
 [user]
-	email = julien.dimarco@witbe.net
 	name = Julien Di Marco
-[alias]
-        ci = commit
-        co = checkout
-        st = status -sb
-        br = branch
+	email = juliendimarco@gmail.com
+
+[github]
+    user = lifely	
+    token = GITHUB_TOKEN
+
 [core]
 	editor = emacs -nw
+	##  editor = code --wait
+
+[color]
+	ui = true
+	diff   = auto
+	status = auto
+	branch = auto
+	interactive = auto
+
+[alias]
+	ci = commit
+	co = checkout
+	st = status -sb
+	br = branch
+
+### 
+
+[push]
+  # Default push should only push the current branch to its push target, regardless of its remote name
+  default = upstream
+  # When pushing, also push tags whose commit-ishs are now reachable upstream
+  followTags = true
+
+[tag]
+  # Sort tags as version numbers whenever applicable, so 1.10.2 is AFTER 1.2.0.
+  sort = version:refname
+
+###
+
+[includeIf "gitdir:~/Developer/apps/"]
+  path = ~/.witbe.gitconfig
